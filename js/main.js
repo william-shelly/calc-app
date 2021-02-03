@@ -1,4 +1,8 @@
-var x, operator, y, equalsButton, total, action, messageArea, resetButton;
+import { Operator } from "./operator.js"
+
+let operator = new Operator();
+
+var x, y, equalsButton, total, messageArea, resetButton;
 
 x = document.querySelector('#x');
 operator = document.querySelector('#operator');
