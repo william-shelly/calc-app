@@ -13,7 +13,10 @@
 </head>
 <body>
     <form action="#" method="POST" onsubmit="return false" >
-        <div class="container d-flex justify-content-center align-items-center">
+        <div class="container d-flex flex-column justify-content-center align-items-center">
+            <div class="row">
+                <div id="message-area" class="col"></div>
+            </div>
             <div class="row">
                 <div class="col d-flex justify-content-center align-items-end">
                     <label for="x" class="form-label d-inline-block m-0 p-2" aria-hidden="true">x</label>
@@ -41,15 +44,20 @@
                     <input class="form-control  d-inline-block" type="number" name="y" id="y">
                 </div>
                 <div class="col d-flex justify-content-center align-items-end">
-                    <label for="equals" class="form-label d-inline-block m-0 p-2" aria-hidden="true">&nbsp;</label>
-                    <button id="equals" class="form-control btn btn-primary d-inline-block">=</button>
+                    <label for="equals-button" class="form-label d-inline-block m-0 p-2" aria-hidden="true">&nbsp;</label>
+                    <button id="equals-button" class="form-control btn btn-primary d-inline-block">=</button>
                 </div>
                 <div class="col d-flex justify-content-center align-items-end">
                     <label for="total" class="form-label d-inline-block m-0 p-2" aria-hidden="true">Total</label>
                     <input class="form-control  d-inline-block" type="number" name="total" id="total" readonly>
-                </div>
-            </div>
-        </div>
+                </div><!-- col -->
+            </div><!-- /row -->
+            <div class="row">
+                <div class="col">
+                    <input id="reset-button" class="btn btn-danger d-sm-inline-block m-0-auto align-center my-2" type="reset" />
+                </div><!-- /col -->
+            </div><!-- /row-->
+        </div><!-- container -->
     </form>
     <script src="js/main.js" type="module"></script>
 </body>
