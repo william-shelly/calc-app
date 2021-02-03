@@ -21,3 +21,7 @@ input[type=number]::-webkit-outer-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+#message-area {
+  min-height: 2.5rem;
+}
