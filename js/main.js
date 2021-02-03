@@ -1,18 +1,21 @@
-var x, operator, y, equals, total, action;
+var x, operator, y, equalsButton, total, action, messageArea, resetButton;
 
 x = document.querySelector('#x');
 operator = document.querySelector('#operator');
 y = document.querySelector('#y');
-equals = document.querySelector('#equals');
+equalsButton = document.querySelector('#equals-button');
 total = document.querySelector('#total');
+messageArea = document.querySelector('#message-area');
+resetButton = document.querySelector('#reset-button');
 
-equals.addEventListener('click', function(e) {
+equalsButton.addEventListener('click', function(e) {
     if (x.value !== '' && x.value !== null && x.value !== undefined && y.value !== '' && y.value !== null && y.value !== undefined ) {
         console.log('TRUE');
         console.log(x.value);
         console.log(y.value);
         let xValue = x.value;
         let yValue = y.value;
+        resetForm(e);
         if(operator.value === 'add') {
             console.log('add');
             total.value = add(xValue,yValue);
@@ -27,9 +30,19 @@ equals.addEventListener('click', function(e) {
         }
     } else {
         console.log('FALSE');
-        /* make a message to say that the input fields are blank */
+        messageArea.classList.add('text-danger','p-2');
+        messageArea.innerHTML = 'Please fill in numbers in the x and y fields';
     }
 });
+
+resetButton.addEventListener('click', function(e) {
+    resetForm(e);
+});
+
+function resetForm(e) {
+    messageArea.innerHTML = '';
+    messageArea.classList.remove('text-danger','p-2');
+}
 
 function add(a,b) {
     console.log(Number(a) + Number(b));
