@@ -12,40 +12,40 @@
     <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <form method="POST">
-        <div class="container">
+    <form action="#" method="POST" onsubmit="return false" >
+        <div class="container d-flex justify-content-center align-items-center">
             <div class="row">
                 <div class="col d-flex justify-content-center align-items-end">
-                    <label for="x" class="form-label d-inline-block" aria-hidden="true">x</label>
+                    <label for="x" class="form-label d-inline-block m-0 p-2" aria-hidden="true">x</label>
                     <input class="form-control d-inline-block" type="number" name="x" id="x">
                 </div>
                 <div class="col d-flex justify-content-center align-items-end">
-                    <label for="operator" class="form-label d-inline-block" aria-hidden="true">&nbsp;</label>
+                    <label for="operator" class="form-label d-inline-block m-0 p-2" aria-hidden="true">&nbsp;</label>
                     <select name="operator" id="operator" class="form-control d-block">
-                        <option value="add" id="add">
+                        <option value="add">
                             +<!-- <i class="fas fa-plus"></i>
                         </option> -->
-                        <option value="subtract" id="subtract">
+                        <option value="subtract">
                             -<!-- <i class="fas fa-minus"></i>
                         </option> -->
-                        <option value="multiply" id="multiply">
+                        <option value="multiply">
                             &times;<!--<i class="fas fa-times"></i> -->
                         </option>
-                        <option value="divide" id="divide">
+                        <option value="divide">
                             &divide;<!-- <i class="fas fa-divide"></i>-->
                         </option>
                     </select>
                 </div>
                 <div class="col d-flex justify-content-center align-items-end">
-                    <label for="y" class="form-label d-inline-block" aria-hidden="true">y</label>
+                    <label for="y" class="form-label d-inline-block m-0 p-2" aria-hidden="true">y</label>
                     <input class="form-control  d-inline-block" type="number" name="y" id="y">
                 </div>
                 <div class="col d-flex justify-content-center align-items-end">
-                    <label for="equals" class="form-label d-inline-block" aria-hidden="true">&nbsp;</label>
+                    <label for="equals" class="form-label d-inline-block m-0 p-2" aria-hidden="true">&nbsp;</label>
                     <button id="equals" class="form-control btn btn-primary d-inline-block">=</button>
                 </div>
                 <div class="col d-flex justify-content-center align-items-end">
-                    <label for="total" class="form-label d-inline-block" aria-hidden="true">Total</label>
+                    <label for="total" class="form-label d-inline-block m-0 p-2" aria-hidden="true">Total</label>
                     <input class="form-control  d-inline-block" type="number" name="total" id="total">
                 </div>
             </div>

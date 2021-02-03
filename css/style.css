@@ -1,4 +1,14 @@
+html, body, form, .container {
+  height: 100%;
+}
 
+[aria-hidden="true"] {
+  display: none;
+}
+
+#operator {
+  width: initial;
+}
 
 /* Chrome, Safari, Edge, Opera */
 input[type=number]::-webkit-inner-spin-button,
