@@ -6,10 +6,6 @@ html, body, form, .container {
   display: none;
 }
 
-#operatorAction {
-  width: initial;
-}
-
 /* Chrome, Safari, Edge, Opera */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
@@ -24,4 +20,12 @@ input[type="number"] {
 
 #message-area {
   min-height: 2.5rem;
+}
+
+.w-initial {
+  width: initial;
+}
+
+.w-max-100px {
+  max-width: 6.25rem;
 }
