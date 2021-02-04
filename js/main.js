@@ -2,10 +2,10 @@ import { Operator } from "./operator.js"
 
 let operator = new Operator();
 
-var x, y, equalsButton, total, messageArea, resetButton;
+var x, y, operatorAction, equalsButton, total, messageArea, resetButton;
 
 x = document.querySelector('#x');
-operator = document.querySelector('#operator');
+operatorAction = document.querySelector('#operatorAction');
 y = document.querySelector('#y');
 equalsButton = document.querySelector('#equals-button');
 total = document.querySelector('#total');
@@ -17,18 +17,18 @@ equalsButton.addEventListener('click', function(e) {
         console.log('TRUE');
         console.log(x.value);
         console.log(y.value);
-        let xValue = x.value;
-        let yValue = y.value;
         resetForm(e);
-        if(operator.value === 'add') {
+        if(operatorAction.value === 'add') {
             console.log('add');
-            total.value = add(xValue,yValue);
-        } else if(operator.value === 'subtract') {
-            total.value = subtract(xValue,yValue);
-        } else if(operator.value === 'multiply') {
-            total.value = multiply(xValue,yValue);
-        } else if(operator.value === 'divide') {
-            total.value = divide(xValue,yValue);
+            console.log(x.value);
+            console.log(y.value);
+            total.value = operator.addNumbers(x.value,y.value);
+        } else if(operatorAction.value === 'subtract') {
+            total.value = operator.subtractNumbers(x.value,y.value);
+        } else if(operatorAction.value === 'multiply') {
+            total.value = operator.multiplyNumbers(x.value,y.value);
+        } else if(operatorAction.value === 'divide') {
+            total.value = operator.divideNumbers(x.value,y.value);
         } else {
             console.log('ummm... what?');
         }
@@ -48,22 +48,23 @@ function resetForm(e) {
     messageArea.classList.remove('text-danger','p-2');
 }
 
-function add(a,b) {
+/* function addNumbers(a,b) {
     console.log(Number(a) + Number(b));
     return Number(a) + Number(b);
-};
+}; */
 
-function subtract(a,b) {
+/* function subtractNumbers(a,b) {
     console.log(Number(a) - Number(b));
+    console.log('function');
     return Number(a) - Number(b);
-};
+}; */
 
-function multiply(a,b) {
+/* function multiplyNumbers(a,b) {
     console.log(Number(a) * Number(b));
     return Number(a) * Number(b);
-};
+}; */
 
-function divide(a,b) {
+/* function divideNumbers(a,b) {
     console.log(Number(a) / Number(b));
     return Number(a) / Number(b);
-};
+}; */
