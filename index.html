@@ -24,18 +24,23 @@
                 </div>
                 <div class="col d-flex justify-content-center align-items-end">
                     <label for="operatorAction" class="form-label d-inline-block m-0 p-2" aria-hidden="true">&nbsp;</label>
-                    <select name="operatorAction" id="operatorAction" class="form-control d-block w-initial">
-                        <option value="add">
-                            +
-                        <option value="subtract">
-                            -
-                        <option value="multiply">
-                            &times;
-                        </option>
-                        <option value="divide">
-                            &divide;
-                        </option>
-                    </select>
+                    <div class="position-relative">
+                        <select name="operatorAction" id="operatorAction" class="form-control d-block w-initial">
+                            <option value="add">
+                                +
+                            <option value="subtract">
+                                -
+                            <option value="multiply">
+                                &times;
+                            </option>
+                            <option value="divide">
+                                &divide;
+                            </option>
+                        </select>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="chevon-down position-absolute z-2" width="30" height="30">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </div><!-- relative -->
                 </div>
                 <div class="col d-flex justify-content-center align-items-end">
                     <label for="y" class="form-label d-inline-block m-0 p-2" aria-hidden="true">y</label>
