@@ -1,4 +1,18 @@
 export class Operator {
+// class Operator {
+
+/*
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Comment 'export class Operator' line above and then uncomment
+=> 'class Operator'
+and
+=> 'module.exports = Operator;'
+to perform test with JEST.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*/
+
     operators = [];
 
     constructor(x, y, action, total) {
@@ -30,3 +44,5 @@ export class Operator {
         return Number(x) / Number(y);
     };
 }
+
+// module.exports = Operator;
