@@ -23,12 +23,16 @@ equalsButton.addEventListener('click', function(e) {
         console.log('TRUE');
         if(operatorAction.value === 'add') {
             total.value = operator.addNumbers(x.value,y.value);
+            resetMessageArea();
         } else if(operatorAction.value === 'subtract') {
             total.value = operator.subtractNumbers(x.value,y.value);
+            resetMessageArea();
         } else if(operatorAction.value === 'multiply') {
             total.value = operator.multiplyNumbers(x.value,y.value);
+            resetMessageArea();
         } else if(operatorAction.value === 'divide') {
             total.value = operator.divideNumbers(x.value,y.value);
+            resetMessageArea();
         } else {
             console.log('FALSE... ummm... what?');
         }
@@ -40,11 +44,11 @@ equalsButton.addEventListener('click', function(e) {
 });
 
 resetButton.addEventListener('click', function() {
-    resetForm();
+    resetMessageArea();
     setFocusToX();
 });
 
-function resetForm() {
+function resetMessageArea() {
     messageArea.innerHTML = '';
     messageArea.classList.remove('text-danger','p-2');
 }
