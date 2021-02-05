@@ -10,6 +10,8 @@ and
 => 'module.exports = Operator;'
 to perform test with JEST.
 
+npm run test
+
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 */
 
