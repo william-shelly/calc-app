@@ -2,7 +2,7 @@ import { Operator } from "./operator.js"
 
 let operator = new Operator();
 
-var x, y, operatorAction, equalsButton, total, messageArea, resetButton;
+let x, y, operatorAction, equalsButton, total, messageArea, resetButton;
 
 x = document.querySelector('#x');
 operatorAction = document.querySelector('#operatorAction');
@@ -11,6 +11,12 @@ equalsButton = document.querySelector('#equals-button');
 total = document.querySelector('#total');
 messageArea = document.querySelector('#message-area');
 resetButton = document.querySelector('#reset-button');
+
+document.addEventListener('DOMContentLoaded', function(){
+    setFocusToX();
+});
+
+total.value = 0;
 
 equalsButton.addEventListener('click', function(e) {
     if (x.value !== '' && x.value !== null && x.value !== undefined && y.value !== '' && y.value !== null && y.value !== undefined ) {
@@ -35,10 +41,14 @@ equalsButton.addEventListener('click', function(e) {
 
 resetButton.addEventListener('click', function() {
     resetForm();
+    setFocusToX();
 });
 
 function resetForm() {
     messageArea.innerHTML = '';
     messageArea.classList.remove('text-danger','p-2');
+}
+
+function setFocusToX() {
     x.focus();
 }
