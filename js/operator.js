@@ -1,17 +1,14 @@
-export class Operator {
-// class Operator {
+class Operator {
 
 /*
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Comment 'export class Operator' line above and then uncomment
-=> 'class Operator'
-and
-=> 'module.exports = Operator;'
-to perform test with JEST.
+To perform test with JEST.
 
 npm run test
 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 */
 
@@ -47,4 +44,4 @@ npm run test
     };
 }
 
-// module.exports = Operator;
+module.exports = Operator;
