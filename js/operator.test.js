@@ -1,5 +1,6 @@
 const { test, expect } = require('@jest/globals');
-const Operator = require('./operator.js');
+// const Operator = require('./operator.js');
+import { Operator } from './operator.js';
 
 test('can add 1 + 2?', () => {
     let calc = new Operator();

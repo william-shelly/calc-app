@@ -1,4 +1,5 @@
-class Operator {
+export class Operator {
+// class Operator {
 
 /*
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -44,4 +45,4 @@ npm run test
     };
 }
 
-module.exports = Operator;
+// module.exports = Operator;
